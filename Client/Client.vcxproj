@@ -81,10 +81,14 @@
     <LibraryPath>C:\dev\vcpkg\vcpkg\installed\x86-windows\lib\manual-link;C:\dev\vcpkg\vcpkg\installed\x86-windows\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>C:\dev\vcpkg\vcpkg\installed\x86-windows\lib\manual-link;C:\dev\vcpkg\vcpkg\installed\x86-windows\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\dev\vcpkg\vcpkg\installed\x86-windows\include;$(IncludePath)</IncludePath>
+    <ExternalIncludePath>C:\dev\git\cpp\cppzmq-master;C:\dev\vcpkg\vcpkg\installed\x86-windows\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>C:\dev\vcpkg\vcpkg\installed\x86-windows\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LibraryPath>C:\dev\vcpkg\vcpkg\installed\x86-windows\lib\manual-link;C:\dev\vcpkg\vcpkg\installed\x86-windows\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\dev\vcpkg\vcpkg\installed\x86-windows\include;$(IncludePath)</IncludePath>
+    <ExternalIncludePath>C:\dev\git\cpp\cppzmq-master;C:\dev\vcpkg\vcpkg\installed\x86-windows\include;$(ExternalIncludePath)</ExternalIncludePath>
+	<LibraryPath>C:\dev\vcpkg\vcpkg\installed\x86-windows\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -92,8 +96,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+	  <AdditionalIncludeDirectories>C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost\json;C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost\lockfree;C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost;C:\dev\git\cpp\cppzmq-master;C:\dev\vcpkg\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost\json;C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost\lockfree;C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost;C:\dev\git\cpp\cppzmq-master;C:\dev\vcpkg\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -110,8 +114,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost\json;C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost\lockfree;C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost;C:\dev\git\cpp\cppzmq-master;C:\dev\vcpkg\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>										   
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,12 +132,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost\json;C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost\lockfree;C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost;C:\dev\git\cpp\cppzmq-master;C:\dev\vcpkg\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\git\cpp\cppzmq-master;C:\dev\vcpkg\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\dev\vcpkg\vcpkg\installed\x86-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>C:\dev\vcpkg\vcpkg\installed\x86-windows\lib\libzmq-mt-4_3_4.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -144,7 +149,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost\json;C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost\lockfree;C:\dev\vcpkg\vcpkg\installed\x86-windows\include\boost;C:\dev\git\cpp\cppzmq-master;C:\dev\vcpkg\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\git\cpp\cppzmq-master;C:\dev\vcpkg\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,6 +157,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\dev\vcpkg\vcpkg\installed\x86-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>C:\dev\vcpkg\vcpkg\installed\x86-windows\lib\libzmq-mt-4_3_4.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
